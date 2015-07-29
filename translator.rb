@@ -11,7 +11,7 @@ raise('needs environment variable TEMPO_USER') unless ENV['TEMPO_USER']
 raise('needs environment variable TEMPO_PASS') unless ENV['TEMPO_PASS']
 raise('needs environment variable PARTICLE_AUTH') unless ENV['PARTICLE_AUTH']
 
-event_uri = URI("https://#{ENV['TEMPO_HOST']}/channels/0/event")
+event_uri = URI("https://#{ENV['TEMPO_HOST']}/api/channels/0/event")
 
 EM.run do
   source = EventMachine::EventSource.new('https://api.particle.io/v1/devices/events', {}, {'Authorization' => "Bearer #{ENV['PARTICLE_AUTH']}"} )
