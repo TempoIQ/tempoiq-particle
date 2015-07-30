@@ -4,7 +4,7 @@ int photoresistorPower = A5;
 char publishString[63];
 
 unsigned long lastTime = 0UL;
-unsigned long pollingInterval = 5000UL;
+unsigned long pollingInterval = 1500UL;
 
 
 void setup()
